@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="웹 개발 경험과 프로젝트, 기술 역량을 소개하는 류승훈의 포트폴리오입니다." />
+  <title>류승훈 포트폴리오</title>
+
+  <link rel="icon" href="data:,">
+
+  <style>
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Pretendard", "Noto Sans KR", Arial, sans-serif;
+  background: #f2eee8;
+  color: #231c18;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(242, 238, 232, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(35, 28, 24, 0.12);
+}
+
+nav {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 25px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  font-size: 22px;
+  letter-spacing: -1px;
+}
+
+nav ul {
+  display: flex;
+  gap: 34px;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: opacity 0.3s;
+}
+
+nav a:hover {
+  opacity: 0.45;
+}
+
+/* 공통 섹션 */
+
+section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 130px 40px;
+}
+
+.section-title {
+  font-size: clamp(42px, 6vw, 82px);
+  line-height: 1;
+  letter-spacing: -4px;
+  margin-bottom: 70px;
+  font-weight: 800;
+}
+
+/* HOME */
+
+.hero {
+  max-width: none;
+  min-height: calc(100vh - 80px);
+  padding: 100px max(40px, calc((100vw - 1280px) / 2));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 430px;
+  height: 430px;
+  border-radius: 50%;
+  background: #38251c;
+  right: 8%;
+  top: 18%;
+  opacity: 0.95;
+  z-index: 0;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero > p:first-child {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin-bottom: 28px;
+  color: #8b6751;
+}
+
+.hero h2 {
+  font-size: clamp(64px, 9vw, 135px);
+  line-height: 0.92;
+  letter-spacing: -7px;
+  max-width: 850px;
+  margin-bottom: 38px;
+}
+
+.hero h3 {
+  font-size: clamp(21px, 2vw, 30px);
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.hero .description {
+  max-width: 600px;
+  font-size: 16px;
+  color: #695b52;
+  margin-bottom: 38px;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 52px;
+  background: #231c18;
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 0;
+  transition: 0.35s;
+}
+
+.btn:hover,
+.btn:focus {
+  background: #8b6751;
+  transform: translateY(-4px);
+  outline: none;
+}
+
+/* ABOUT */
+
+#about {
+  min-height: 80vh;
+}
+
+.about-box {
+  background: transparent;
+  box-shadow: none;
+  border-top: 1px solid #231c18;
+  border-bottom: 1px solid #231c18;
+  border-radius: 0;
+  padding: 55px 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  font-size: 18px;
+}
+
+.about-box p {
+  margin-bottom: 8px;
+}
+
+/* STRENGTHS */
+
+#strengths {
+  max-width: none;
+  background: #231c18;
+  color: #f2eee8;
+  padding-left: max(40px, calc((100vw - 1280px) / 2));
+  padding-right: max(40px, calc((100vw - 1280px) / 2));
+}
+
+#strengths .experience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: rgba(255,255,255,0.18);
+}
+
+#strengths .card {
+  background: #231c18;
+  color: #f2eee8;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 42px;
+  min-height: 520px;
+}
+
+#strengths .card:hover {
+  transform: none;
+  background: #2d231e;
+  box-shadow: none;
+}
+
+#strengths .card h3 {
+  font-size: 27px;
+  line-height: 1.25;
+  margin-bottom: 35px;
+}
+
+#strengths .card p {
+  color: #d1c5bc;
+}
+
+#strengths .card p strong {
+  display: inline-block;
+  color: #fff;
+  margin-top: 10px;
+}
+
+/* RESULT */
+
+.evidence {
+  margin-top: 25px;
+  padding: 18px 0 18px 18px;
+  border-left: 2px solid #c79c75;
+  background: transparent;
+}
+
+.evidence strong {
+  color: #c79c75;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.evidence p {
+  margin-top: 6px;
+  font-size: 13px;
+}
+
+/* EXPERIENCE */
+
+#experience {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+#experience .card {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 60px;
+  padding: 70px 0;
+  border-top: 1px solid #aaa096;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  min-height: auto;
+  transition: 0.35s;
+}
+
+#experience .card:last-child {
+  border-bottom: 1px solid #aaa096;
+}
+
+#experience .card:hover {
+  transform: translateX(10px);
+  box-shadow: none;
+}
+
+#experience .card h3 {
+  font-size: clamp(28px, 3vw, 44px);
+  line-height: 1.15;
+  letter-spacing: -2px;
+}
+
+#experience .card p {
+  color: #695b52;
+  font-size: 16px;
+}
+
+/* 주요 업무 태그 */
+
+.card-detail {
+  margin-top: 22px;
+}
+
+.card-detail strong {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.card-detail span {
+  display: inline-block;
+  border: 1px solid #b7aaa0;
+  background: transparent;
+  margin: 4px 5px 4px 0;
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 30px;
+}
+
+/* 기술 태그 */
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 20px;
+}
+
+.tech-tags span {
+  background: #231c18;
+  color: #f2eee8;
+  padding: 7px 13px;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* SKILLS */
+
+#skills {
+  max-width: none;
+  background: #cbb9a6;
+  padding-left: max(40px, calc((100vw - 1280px) / 2));
+  padding-right: max(40px, calc((100vw - 1280px) / 2));
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.skill {
+  font-size: clamp(24px, 3vw, 45px);
+  font-weight: 700;
+  background: transparent;
+  box-shadow: none;
+  border: 1px solid #231c18;
+  border-radius: 100px;
+  padding: 10px 27px;
+  transition: 0.3s;
+}
+
+.skill:hover {
+  background: #231c18;
+  color: #f2eee8;
+  transform: translateY(-4px);
+}
+
+/* CONTACT */
+
+#contact {
+  max-width: none;
+  min-height: 70vh;
+  text-align: left;
+  background: #8c5f47;
+  color: #fff;
+  padding-left: max(40px, calc((100vw - 1280px) / 2));
+  padding-right: max(40px, calc((100vw - 1280px) / 2));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#contact .section-title {
+  font-size: clamp(60px, 9vw, 130px);
+}
+
+#contact p {
+  color: #eadfd8;
+  font-size: 18px;
+  margin-bottom: 35px;
+}
+
+#contact .btn {
+  background: #fff;
+  color: #231c18;
+}
+
+#contact .btn:hover {
+  background: #231c18;
+  color: #fff;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 30px 40px;
+  text-align: center;
+  background: #231c18;
+  color: #a89b92;
+  font-size: 12px;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+  nav {
+    padding: 20px;
+  }
+
+  section {
+    padding: 100px 25px;
+  }
+
+  .hero {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .hero::after {
+    width: 300px;
+    height: 300px;
+    right: -90px;
+    top: 20%;
+  }
+
+  .about-box {
+    grid-template-columns: 1fr;
+  }
+
+  #strengths .experience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #strengths .card {
+    min-height: auto;
+    border-bottom: 1px solid rgba(255,255,255,.15);
+  }
+
+  #experience .card {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+  header {
+    position: relative;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 20px;
+  }
+
+  nav a {
+    font-size: 11px;
+  }
+
+  .hero {
+    min-height: 80vh;
+  }
+
+  .hero h2 {
+    letter-spacing: -4px;
+  }
+
+  .hero::after {
+    width: 200px;
+    height: 200px;
+    right: -80px;
+    top: 35%;
+  }
+
+  .section-title {
+    letter-spacing: -2px;
+  }
+
+  #strengths,
+  #skills,
+  #contact {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  #strengths .card {
+    padding: 32px 20px;
+  }
+
+  .skill {
+    font-size: 20px;
+  }
+}
+
+/* EXPERIENCE 내부 레이아웃 최종 보정 */
+#experience .card {
+  grid-template-columns: 42% 58%;
+  column-gap: 70px;
+  row-gap: 18px;
+  padding: 55px 0;
+}
+
+#experience .card h3 {
+  grid-column: 1;
+  grid-row: 1 / span 3;
+
+  font-size: clamp(26px, 2.5vw, 40px);
+  word-break: keep-all;
+  overflow-wrap: normal;
+  padding-right: 20px;
+}
+
+#experience .card > p {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
+}
+
+#experience .card .card-detail {
+  grid-column: 2;
+  grid-row: 2;
+  margin-top: 5px;
+}
+
+#experience .card .tech-tags {
+  grid-column: 2;
+  grid-row: 3;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  margin-top: 5px;
+}
+
+#experience .card .tech-tags span {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+/* HOME 2차 디자인 보정 */
+
+.hero h2 {
+  font-size: clamp(58px, 7vw, 105px);
+  line-height: 0.95;
+  letter-spacing: -6px;
+  max-width: 800px;
+}
+
+.hero h3 {
+  margin-top: 15px;
+  font-size: clamp(22px, 2vw, 30px);
+  font-weight: 500;
+}
+
+.hero .description {
+  margin-top: 10px;
+  max-width: 540px;
+  line-height: 1.8;
+}
+
+/* 오른쪽 원을 단순한 원보다 그래픽처럼 보이게 */
+.hero::after {
+  width: 390px;
+  height: 390px;
+  right: 8%;
+  top: 19%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #3b281f 0%,
+      #5a3c2d 50%,
+      #8b6751 100%
+    );
+
+  border-radius: 50% 50% 45% 55% / 55% 45% 55% 45%;
+
+  transform: rotate(-8deg);
+
+  box-shadow:
+    35px 35px 0 rgba(139, 103, 81, 0.15),
+    -25px -25px 0 rgba(35, 28, 24, 0.05);
+}
+
+/* ABOUT ME 버튼 */
+.hero .btn {
+  margin-top: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 스크롤 안내 문구 */
+.hero::before {
+  content: "SCROLL TO EXPLORE  ↓";
+  position: absolute;
+  left: max(40px, calc((100vw - 1280px) / 2));
+  bottom: 35px;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #8b6751;
+}
+
+/* ABOUT ME 디자인 보정 */
+
+#about {
+  position: relative;
+}
+
+.about-box {
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* 이름 / 지역 / 경력 */
+.about-box > div:first-child {
+  display: grid;
+  gap: 22px;
+}
+
+/* 자기소개 문장 */
+.about-box > p:last-child {
+  position: relative;
+
+  font-size: clamp(24px, 2.2vw, 34px);
+  line-height: 1.55;
+  font-weight: 500;
+  letter-spacing: -1px;
+
+  max-width: 600px;
+}
+
+/* ABOUT 장식 번호 */
+#about::after {
+  content: "04";
+  position: absolute;
+
+  right: 40px;
+  bottom: 40px;
+
+  font-size: clamp(90px, 12vw, 180px);
+  line-height: 1;
+  font-weight: 800;
+
+  color: rgba(35, 28, 24, 0.06);
+
+  pointer-events: none;
+}
+
+/* 작은 영문 포인트 */
+.about-box > p:last-child::before {
+  content: "WEB DEVELOPMENT EXPERIENCE";
+  display: block;
+
+  margin-bottom: 20px;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+
+  color: #8b6751;
+}
+
+/* =========================
+   MOBILE 최종 보정
+========================= */
+
+@media (max-width: 650px) {
+
+  /* 전체 가로 넘침 방지 */
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* EXPERIENCE */
+  #experience {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  #experience .card {
+    display: block;
+    padding: 45px 0;
+  }
+
+  #experience .card h3 {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 25px;
+
+    font-size: 28px;
+    line-height: 1.3;
+
+    word-break: keep-all;
+  }
+
+  #experience .card > p {
+    width: 100%;
+    margin-bottom: 25px;
+
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  #experience .card .card-detail {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  #experience .card .tech-tags {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+
+  /* 주요 업무 태그 */
+  #experience .card-detail span {
+    margin-bottom: 7px;
+  }
+
+  /* 기술 태그 */
+  #experience .tech-tags span {
+    white-space: nowrap;
+  }
+}
+
+/* HOME 모바일 최종 보정 */
+@media (max-width: 650px) {
+
+  #home {
+    min-height: 100vh;
+    padding: 80px 25px 70px;
+    justify-content: flex-start;
+    overflow: hidden;
+  }
+
+  #home > p:first-child {
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  #home h2 {
+    font-size: 48px;
+    line-height: 0.95;
+    letter-spacing: -3px;
+    max-width: 100%;
+    margin-bottom: 35px;
+  }
+
+  #home h3 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+
+  #home .description {
+    max-width: 290px;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  #home .btn {
+    margin-top: 0;
+  }
+
+  /* 모바일에서는 원을 텍스트 뒤에서 제거 */
+  #home::after {
+    width: 180px;
+    height: 180px;
+    right: -65px;
+    top: 380px;
+    opacity: 0.35;
+    z-index: 0;
+  }
+
+  #home > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  #home::before {
+    left: 25px;
+    bottom: 25px;
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 650px) {
+
+  #about {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .about-box {
+    display: block;
+    width: 100%;
+    gap: 0;
+  }
+
+  .about-box > p {
+    width: 100%;
+  }
+
+  .about-box > p:last-child {
+    width: 100%;
+    max-width: none;
+
+    font-size: 22px;
+    line-height: 1.6;
+    letter-spacing: -0.5px;
+
+    word-break: keep-all;
+    overflow-wrap: normal;
+  }
+
+  .about-box > p:last-child::before {
+    margin-bottom: 18px;
+  }
+
+  #about::after {
+    font-size: 100px;
+    right: 20px;
+    bottom: 20px;
+  }
+}
+/* =========================
+   EVIDENCE
+========================= */
+
+#evidence-section {
+  max-width: none;
+  background: #f2eee8;
+  padding-left: max(40px, calc((100vw - 1280px) / 2));
+  padding-right: max(40px, calc((100vw - 1280px) / 2));
+}
+
+.evidence-intro {
+  max-width: 600px;
+  margin-bottom: 70px;
+  color: #695b52;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.evidence-group {
+  padding: 45px 0;
+  border-top: 1px solid #aaa096;
+}
+
+.evidence-group:last-child {
+  border-bottom: 1px solid #aaa096;
+}
+
+.evidence-group h3 {
+  margin-bottom: 25px;
+
+  font-size: 12px;
+  letter-spacing: 3px;
+
+  color: #8b6751;
+}
+
+.evidence-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.evidence-btn {
+  min-height: 48px;
+
+  padding: 12px 20px;
+
+  border: 1px solid #231c18;
+  border-radius: 100px;
+
+  background: transparent;
+  color: #231c18;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.evidence-btn:hover,
+.evidence-btn:focus {
+  background: #231c18;
+  color: #f2eee8;
+
+  outline: none;
+
+  transform: translateY(-3px);
+}
+
+
+/* =========================
+   EVIDENCE MODAL
+========================= */
+
+.evidence-modal {
+  position: fixed;
+  inset: 0;
+
+  z-index: 9999;
+
+  display: none;
+
+  padding: 40px;
+
+  background: rgba(20, 15, 12, 0.75);
+
+  overflow-y: auto;
+}
+
+.evidence-modal.active {
+  display: flex;
+
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.modal-box {
+  width: min(1000px, 100%);
+
+  margin: 40px auto;
+
+  background: #f2eee8;
+  color: #231c18;
+
+  border-radius: 4px;
+
+  overflow: hidden;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 25px 30px;
+
+  border-bottom: 1px solid #aaa096;
+}
+
+.modal-header h2 {
+  font-size: 24px;
+}
+
+.modal-close {
+  width: 44px;
+  height: 44px;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #231c18;
+
+  font-size: 32px;
+
+  cursor: pointer;
+}
+
+.modal-content {
+  padding: 30px;
+
+  max-height: 70vh;
+
+  overflow: auto;
+}
+
+.modal-content pre {
+  margin: 0;
+
+  white-space: pre-wrap;
+  word-break: keep-all;
+
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+
+  font-size: 15px;
+  line-height: 1.8;
+
+  color: #342a25;
+}
+
+.modal-content img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  margin: 0 auto;
+}
+
+
+/* 모바일 */
+
+@media (max-width: 650px) {
+
+  #evidence-section {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .evidence-buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .evidence-btn {
+    width: 100%;
+    text-align: left;
+  }
+
+  .evidence-modal {
+    padding: 10px;
+  }
+
+  .modal-box {
+    margin: 15px auto;
+  }
+
+  .modal-header {
+    padding: 18px;
+  }
+
+  .modal-header h2 {
+    font-size: 18px;
+  }
+
+  .modal-content {
+    padding: 20px;
+    max-height: 75vh;
+  }
+
+  .modal-content pre {
+    font-size: 14px;
+  }
+}
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <h1>류승훈</h1>
+
+      <ul>
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#strengths">STRENGTHS</a></li>
+        <li><a href="#experience">EXPERIENCE</a></li>
+        <li><a href="#skills">SKILLS</a></li>
+	<li><a href="#evidence-section">EVIDENCE</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="home" class="hero">
+      <p>PORTFOLIO</p>
+
+      <h2>안녕하세요.<br />류승훈입니다.</h2>
+
+      <h3>새로운 직무에 도전하고 있습니다.</h3>
+
+      <p class="description">
+        웹 개발 약 4년의 경험을 바탕으로
+        새로운 분야와 직무에 도전하기 위해 노력하고 있습니다.
+      </p>
+
+      <a href="#about" class="btn">ABOUT ME</a>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">ABOUT ME</h2>
+
+      <div class="about-box">
+        <p><strong>이름 :</strong> 류승훈</p>
+        <p><strong>지역 :</strong> 대구</p>
+        <p><strong>경력 :</strong> 웹 개발 약 4년</p>
+
+        <br />
+
+        <p>
+          웹 개발자로 약 4년간 근무했으며,
+          기존 개발 경험을 바탕으로 새로운 분야와 직무에
+          도전하기 위해 노력하고 있습니다.
+        </p>
+      </div>
+    </section>
+
+
+  <section id="strengths">
+  <h2 class="section-title">STRENGTHS</h2>
+
+  <div class="experience-grid">
+
+    <div class="card">
+      <h3>문제 해결 능력</h3>
+
+      <p><strong>상황</strong></p>
+      <p>
+        경북대학교 연구관리 시스템을 운영하면서
+        알림톡 발송 기능 개발이 필요했습니다.
+      </p>
+
+      <p><strong>행동</strong></p>
+      <p>
+        기존 시스템 구조와 발송 과정을 분석하고
+        연구관리 업무에 맞는 알림톡 발송 기능을 개발했습니다.
+      </p>
+
+      <p><strong>결과</strong></p>
+      <p>
+        알림톡 기능 개발을 완료하여
+        실제 시스템에 적용했습니다.
+      </p>
+
+      <div class="evidence">
+ 	 <strong>RESULT</strong>
+  <p>
+    연구관리 업무에 필요한 알림톡 발송 기능 개발 및 시스템 적용 완료
+  </p>
+</div>
+    </div>
+
+
+    <div class="card">
+      <h3>업무 이해 및 적응력</h3>
+
+      <p><strong>상황</strong></p>
+      <p>
+        도로공사 시스템에서 미납 관련 업무를 담당했습니다.
+      </p>
+
+      <p><strong>행동</strong></p>
+      <p>
+        미납 데이터 관리뿐만 아니라 안내장,
+        고지서, 알림톡 등 여러 기능을 관리했습니다.
+      </p>
+
+      <p><strong>결과</strong></p>
+      <p>
+        미납 업무 전반의 시스템 관리 경험을 쌓았습니다.
+      </p>
+    </div>
+
+
+    <div class="card">
+      <h3>새로운 업무에 대한 도전</h3>
+
+      <p><strong>상황</strong></p>
+      <p>
+        기존에는 시스템 개발과 유지보수를 중심으로
+        업무를 수행했습니다.
+      </p>
+
+      <p><strong>행동</strong></p>
+      <p>
+        전북대학교 프로젝트에서 기존 개발 경험을 활용하여
+        SI 설계 업무에 참여했습니다.
+      </p>
+
+      <p><strong>결과</strong></p>
+      <p>
+        개발과 유지보수뿐만 아니라
+        시스템 구축을 위한 SI 설계까지 경험 영역을 넓혔습니다.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2 class="section-title">EXPERIENCE</h2>
+
+  <div class="experience-grid">
+
+    <!-- 도로공사 -->
+    <div class="card">
+      <h3>도로공사 시스템 관리</h3>
+
+      <p>
+        미납 업무 파트를 담당하여 미납 데이터 관리,
+        안내장 및 고지서 관련 기능을 관리했습니다.
+        또한 알림톡 발송 관련 업무를 수행했습니다.
+      </p>
+
+      <div class="card-detail">
+        <strong>주요 업무</strong>
+        <span>미납 데이터 관리</span>
+        <span>안내장·고지서</span>
+        <span>알림톡</span>
+      </div>
+
+      <div class="tech-tags">
+        <span>Java</span>
+        <span>JavaScript</span>
+        <span>Nexacro</span>
+        <span>SQL</span>
+      </div>
+    </div>
+
+
+    <!-- 경북대학교 -->
+    <div class="card">
+      <h3>경북대학교 시스템 관리</h3>
+
+      <p>
+        연구관리 파트를 담당하여 연구행정 관련 시스템의
+        운영 및 유지보수 업무를 수행했습니다.
+        특히 알림톡 발송 기능을 개발하고 적용했습니다.
+      </p>
+
+      <div class="card-detail">
+        <strong>주요 업무</strong>
+        <span>연구관리</span>
+        <span>시스템 유지보수</span>
+        <span>알림톡 기능 개발</span>
+      </div>
+
+      <div class="tech-tags">
+        <span>Java</span>
+        <span>JavaScript</span>
+        <span>WebSquare</span>
+        <span>SQL</span>
+      </div>
+    </div>
+
+
+    <!-- 전북대학교 -->
+    <div class="card">
+      <h3>전북대학교 시스템 SI 설계</h3>
+
+      <p>
+        전북대학교 시스템 구축 프로젝트에 참여하여
+        SI 설계 업무를 담당했습니다.
+      </p>
+
+      <div class="card-detail">
+        <strong>주요 업무</strong>
+        <span>SI 설계</span>
+        <span>시스템 구축</span>
+      </div>
+
+      <div class="tech-tags">
+        <span>Java</span>
+        <span>JavaScript</span>
+        <span>Nexacro</span>
+        <span>SQL</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <section id="skills">
+      <h2 class="section-title">SKILLS</h2>
+
+      <div class="skills">
+        <div class="skill">Java</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Nexacro</div>
+        <div class="skill">WebSquare</div>
+        <div class="skill">SQL</div>
+      </div>
+    </section>
+<section id="evidence-section">
+  <h2 class="section-title">EVIDENCE</h2>
+
+  <p class="evidence-intro">
+    포트폴리오 제작 과정에서 작성한 문서와
+    검증 결과를 직접 확인할 수 있습니다.
+  </p>
+
+  <div class="evidence-group">
+
+    <h3>DOCUMENTS</h3>
+
+    <div class="evidence-buttons">
+
+      <button
+ 	 class="evidence-btn"
+ 	 data-type="text"
+	 data-file="evidence/documents/privacy_check.txt"
+ 	 data-title="공개 · 비공개 점검표">
+ 	 공개 · 비공개 점검표
+	</button>
+
+     <button
+  	class="evidence-btn"
+ 	data-type="text"
+  data-file="evidence/documents/experience_log.txt"
+  	data-title="경험 3개 수정 기록">
+  	경험 3개 수정 기록
+	</button>
+
+	<button
+  	class="evidence-btn"
+  	data-type="text"
+  	data-file="evidence/documents/interaction_test.txt"
+  	data-title="상호작용 검사 결과">
+  	상호작용 검사 결과
+	</button>
+
+<button
+  class="evidence-btn"
+  data-type="text"
+  data-file="evidence/documents/ai_usage.txt"
+  data-title="AI 활용 기록">
+  AI 활용 기록
+</button>
+
+      <button
+  class="evidence-btn"
+  data-type="text"
+  data-file="evidence/documents/validation_guide.txt"
+  data-title="최종 검증 안내서">
+  최종 검증 안내서
+</button>
+
+    </div>
+  </div>
+
+
+  <div class="evidence-group">
+
+    <h3>SCREEN CAPTURES</h3>
+
+    <div class="evidence-buttons">
+
+      
+<button
+  class="evidence-btn image-btn"
+  data-type="image"
+  data-file="evidence/images/mobile_390x844.png"
+  data-title="390 × 844 Mobile">
+  390 × 844
+</button>
+
+<button
+  class="evidence-btn image-btn"
+  data-type="image"
+  data-file="evidence/images/desktop_1366x768.png"
+  data-title="1366 × 768">
+  1366 × 768
+</button>
+
+<button
+  class="evidence-btn image-btn"
+  data-type="image"
+  data-file="evidence/images/desktop_1920x1080.png"
+  data-title="1920 × 1080">
+  1920 × 1080
+</button>
+
+<button
+  class="evidence-btn image-btn"
+  data-type="image"
+  data-file="evidence/images/console_error_0.png"
+  data-title="Console Error 0">
+  Console Error 0
+</button>
+
+    </div>
+  </div>
+
+</section>
+
+    <section id="contact">
+      <h2 class="section-title">CONTACT</h2>
+
+  <p>
+    새로운 분야와 직무에 도전하며 다양한 경험을 쌓고 싶습니다.
+  </p>
+
+  <p>
+    함께 성장할 수 있는 새로운 기회를 기다리고 있습니다.
+  </p>
+
+  <a href="#home" class="btn">처음으로</a>
+    </section>
+<div id="evidence-modal" class="evidence-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+
+  <div class="modal-box">
+
+    <div class="modal-header">
+      <h2 id="modal-title">EVIDENCE</h2>
+
+      <button
+        id="modal-close"
+        class="modal-close"
+        type="button"
+        aria-label="닫기">
+        ×
+      </button>
+    </div>
+
+    <div id="modal-content" class="modal-content">
+    </div>
+
+  </div>
+
+</div>
+  </main>
+
+  <footer>
+    <p>© 2026 류승훈 Portfolio</p>
+  </footer>
+<script>
+  const evidenceButtons = document.querySelectorAll(".evidence-btn");
+
+  const evidenceModal = document.getElementById("evidence-modal");
+  const modalTitle = document.getElementById("modal-title");
+  const modalContent = document.getElementById("modal-content");
+  const modalClose = document.getElementById("modal-close");
+  let lastFocusedElement = null;
+
+
+  evidenceButtons.forEach((button) => {
+
+    button.addEventListener("click", async () => {
+
+      const file = button.dataset.file;
+      const type = button.dataset.type;
+      const title = button.dataset.title;
+      lastFocusedElement = button;
+
+      modalTitle.textContent = title;
+      modalContent.innerHTML = "";
+
+      evidenceModal.classList.add("active");
+      evidenceModal.setAttribute("aria-hidden", "false");
+
+      document.body.style.overflow = "hidden";
+      modalClose.focus();
+
+
+      /* TXT 파일 */
+      if (type === "text") {
+
+        const loading = document.createElement("p");
+
+        loading.textContent = "내용을 불러오는 중입니다...";
+
+        modalContent.appendChild(loading);
+
+
+        try {
+
+          const response = await fetch(file);
+
+          if (!response.ok) {
+            throw new Error("파일을 불러올 수 없습니다.");
+          }
+
+          const text = await response.text();
+
+          modalContent.innerHTML = "";
+
+          const pre = document.createElement("pre");
+
+          pre.textContent = text;
+
+          modalContent.appendChild(pre);
+
+        } catch (error) {
+
+          modalContent.innerHTML = "";
+
+          const errorMessage = document.createElement("p");
+
+          errorMessage.textContent =
+            "파일을 불러오지 못했습니다. GitHub에 파일이 업로드되어 있는지 확인해주세요.";
+
+          modalContent.appendChild(errorMessage);
+        }
+
+      }
+
+
+      /* 이미지 파일 */
+      if (type === "image") {
+
+        const image = document.createElement("img");
+
+        image.src = file;
+        image.alt = title;
+
+        image.addEventListener("error", () => {
+
+          modalContent.innerHTML = "";
+
+          const errorMessage = document.createElement("p");
+
+          errorMessage.textContent =
+            "이미지를 불러오지 못했습니다. 파일명을 확인해주세요.";
+
+          modalContent.appendChild(errorMessage);
+
+        });
+
+        modalContent.appendChild(image);
+
+      }
+
+    });
+
+  });
+
+
+  function closeEvidenceModal() {
+
+    evidenceModal.classList.remove("active");
+
+    evidenceModal.setAttribute("aria-hidden", "true");
+
+    document.body.style.overflow = "";
+
+    if (lastFocusedElement) {
+      lastFocusedElement.focus();
+    }
+
+  }
+
+
+  modalClose.addEventListener("click", closeEvidenceModal);
+
+
+  evidenceModal.addEventListener("click", (event) => {
+
+    if (event.target === evidenceModal) {
+      closeEvidenceModal();
+    }
+
+  });
+
+
+  document.addEventListener("keydown", (event) => {
+
+    if (
+      event.key === "Escape" &&
+      evidenceModal.classList.contains("active")
+    ) {
+
+      closeEvidenceModal();
+
+    }
+
+  });
+</script>
+</body>
+</html>
+

@@ -246,6 +246,22 @@ section {
   margin-top: 42px;
   padding: 28px 0 0;
   border-top: 1px solid rgba(255, 255, 255, 0.25);
+  scroll-margin-top: 100px;
+}
+
+.strengths-jump {
+  display: inline-block;
+  margin: -36px 0 42px;
+  color: #c79c75;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.strengths-jump:hover,
+.strengths-jump:focus-visible {
+  color: #f2eee8;
 }
 
 .strengths-reflection h3 {
@@ -1209,6 +1225,7 @@ footer a:focus-visible {
 
   <section id="strengths">
   <h2 class="section-title">STRENGTHS</h2>
+  <a class="strengths-jump" href="#ritual-strengths">기록에서 찾은 강점 보기 ↓</a>
 
   <div class="experience-grid">
 
@@ -1285,7 +1302,7 @@ footer a:focus-visible {
       </p>
     </div>
   </div>
-  <div class="strengths-reflection">
+  <div id="ritual-strengths" class="strengths-reflection">
     <h3>기록에서 찾은 강점</h3>
     <div class="ritual-strength-grid">
       <article class="ritual-strength">

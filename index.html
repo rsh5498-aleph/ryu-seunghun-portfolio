@@ -249,17 +249,41 @@ section {
 }
 
 .strengths-reflection h3 {
-  margin-bottom: 12px;
+  margin-bottom: 28px;
   color: #c79c75;
-  font-size: 15px;
-  letter-spacing: 0.08em;
+  font-size: clamp(24px, 3vw, 36px);
+  letter-spacing: -0.03em;
 }
 
-.strengths-reflection p {
-  max-width: 850px;
+.ritual-strength-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.ritual-strength {
+  padding: 28px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.ritual-strength h4 {
+  margin-bottom: 16px;
+  color: #f2eee8;
+  font-size: clamp(20px, 2vw, 26px);
+  line-height: 1.35;
+}
+
+.ritual-strength p {
   color: #d1c5bc;
-  font-size: clamp(16px, 1.6vw, 20px);
-  line-height: 1.7;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.ritual-strength .ritual-evidence {
+  margin-top: 18px;
+  color: #c79c75;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 /* RESULT */
@@ -1262,12 +1286,24 @@ footer a:focus-visible {
     </div>
   </div>
   <div class="strengths-reflection">
-    <h3>기록에서 확인한 일하는 방식</h3>
-    <p>
-      꾸준히 참여하고, 필요한 정보를 함께 쓰기 좋게 정리하며,
-      막힌 부분을 확인해 다음 해결 방향을 찾으려 합니다.
-      팀 활동과 실제 업무를 돌아보며 다듬어 온 태도입니다.
-    </p>
+    <h3>기록에서 찾은 강점</h3>
+    <div class="ritual-strength-grid">
+      <article class="ritual-strength">
+        <h4>꾸준히 참여하고 다시 시도하기</h4>
+        <p>놓친 수업 내용을 스스로 해결하려고 했고, 팀원이 빠진 날에도 계속 참여했습니다. 동료 기록에는 그 시도가 인상적이었고 함께해 주어 힘이 됐다는 반응이 남아 있습니다.</p>
+        <p class="ritual-evidence">기록 근거 · 2026. 8. 25. / 9. 7.</p>
+      </article>
+      <article class="ritual-strength">
+        <h4>정보를 정리해 함께 나누기</h4>
+        <p>조활동에서 자료 취합 범위를 구체화하고 수업 내용을 정리해 공유했습니다. 동료 기록에는 방향을 잡는 데 도움이 됐고 헷갈리는 부분을 알려 주었다는 반응이 있습니다.</p>
+        <p class="ritual-evidence">기록 근거 · 2026. 8. 11. / 8. 18.</p>
+      </article>
+      <article class="ritual-strength">
+        <h4>막힌 부분을 확인하고 해결 방향 찾기</h4>
+        <p>팀 활동에서 오류를 함께 살폈고, 놓친 부분을 빠르게 알아채 알려 주었습니다. 동료 기록에는 오류 확인에 대한 감사와 분석을 잘한다는 평가가 남아 있습니다.</p>
+        <p class="ritual-evidence">기록 근거 · 2026. 8. 21. / 9. 8. / 9. 10.</p>
+      </article>
+    </div>
   </div>
 </section>
 
